@@ -4,7 +4,6 @@
     "description": "A globetrotting guide to gratuity",
     "version": "3.1.0",
     "slug": "tipjar-mobile",
-    "privacy": "public",
     "orientation": "portrait",
     "icon": "./assets/app-store-icon.png",
     "splash": {
@@ -24,7 +23,8 @@
       },
       "entitlements": {
         "aps-environment": "development"
-      }
+      },
+      "newArchEnabled": true
     },
     "platforms": ["android", "ios"],
     "extra": {
