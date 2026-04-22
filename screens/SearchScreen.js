@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
-  SafeAreaView,
   StatusBar,
   Keyboard,
   TextInput,
@@ -10,6 +9,7 @@ import {
   View,
   Text,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // COMPONENTS
@@ -20,7 +20,7 @@ import Footer from './../components/Footer';
 import { colorMediumGrey } from './../styles/Constants';
 import SearchStyles from './../styles/SearchStyles';
 
-export default Search = ({ navigation }) => {
+const Search = ({ navigation }) => {
   const [displaySearchBar, _setDisplaySearchBar] = useState(false);
   const displaySearchBarRef = useRef(displaySearchBar);
   const setDisplaySearchBar = (newDisplaySearchBar) => {
@@ -84,7 +84,7 @@ export default Search = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={SearchStyles.safeViewContainer}>
+    <SafeAreaView edges={['top']} style={SearchStyles.safeViewContainer}>
       <StatusBar barStyle='dark-content' />
       <View style={SearchStyles.bodyContainer}>
         <Header />
@@ -122,3 +122,5 @@ export default Search = ({ navigation }) => {
     </SafeAreaView>
   );
 };
+
+export default Search;

@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { SafeAreaView, StatusBar, ScrollView, View, Text } from 'react-native';
+import { StatusBar, ScrollView, View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { FontAwesome } from '@expo/vector-icons';
 
 // STYLES
 import SearchInfoStyles from './../styles/SearchInfoStyles';
 
-export default SearchInfoScreen = ({ route }) => {
+const SearchInfoScreen = ({ route }) => {
   const [countryTipData, _setCountryTipData] = useState([]);
   const countryTipDataRef = useRef(countryTipData);
   const setCountryTipData = (newCountryTipData) => {
@@ -45,7 +46,7 @@ export default SearchInfoScreen = ({ route }) => {
   }, []);
 
   return (
-    <SafeAreaView style={SearchInfoStyles.container}>
+    <SafeAreaView edges={[]} style={SearchInfoStyles.container}>
       <StatusBar barStyle='dark-content' />
       <ScrollView style={SearchInfoStyles.scrollContainer}>
         <View style={SearchInfoStyles.countryContainer}>
@@ -102,3 +103,5 @@ export default SearchInfoScreen = ({ route }) => {
     </SafeAreaView>
   );
 };
+
+export default SearchInfoScreen;

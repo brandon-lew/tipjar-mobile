@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
-  SafeAreaView,
   StatusBar,
   FlatList,
   TouchableOpacity,
   View,
   Text,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import NetInfo from '@react-native-community/netinfo';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -17,7 +17,7 @@ import Footer from './../components/Footer';
 // STYLES
 import ListStyles from './../styles/ListStyles';
 
-export default ListScreen = ({ navigation }) => {
+const ListScreen = ({ navigation }) => {
   const [displayList, _setDisplayList] = useState(false);
   const displayListRef = useRef(displayList);
   const setDisplayList = (newDisplayList) => {
@@ -54,7 +54,7 @@ export default ListScreen = ({ navigation }) => {
             AsyncStorage.setItem('tip-data', JSON.stringify(result)).then(
               () => {
                 getCountryTipData();
-              }
+              },
             );
           });
         fetch('https://brandonscode.herokuapp.com/tipjar/currency-data')
@@ -64,7 +64,7 @@ export default ListScreen = ({ navigation }) => {
               () => {
                 setDisplayLoading(false);
                 setDisplayList(true);
-              }
+              },
             );
           });
       } else {
@@ -108,7 +108,7 @@ export default ListScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={ListStyles.safeViewContainer}>
+    <SafeAreaView edges={['top']} style={ListStyles.safeViewContainer}>
       <StatusBar barStyle='dark-content' />
       <View style={ListStyles.container}>
         <Header />
@@ -144,3 +144,5 @@ export default ListScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 };
+
+export default ListScreen;

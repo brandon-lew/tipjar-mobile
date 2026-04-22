@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
-import {
-  StatusBar,
-  SafeAreaView,
-  Text,
-  View,
-  TouchableHighlight,
-} from 'react-native';
+import { StatusBar, Text, View, TouchableHighlight } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import CalculatorStyles from './../styles/CalculatorStyles';
 
-export default CalculatorScreen = ({ navigation }) => {
+const CalculatorScreen = ({ navigation }) => {
   const [inputValue, setInputValue] = useState(0);
   const [previousInputValue, setPreviousInputValue] = useState(0);
   const [percentPressed, setPercentPressed] = useState(false);
@@ -59,7 +54,7 @@ export default CalculatorScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={CalculatorStyles.container}>
+    <SafeAreaView edges={['top']} style={CalculatorStyles.container}>
       <StatusBar barStyle='dark-content' />
       <View style={CalculatorStyles.displayContainer}>
         <Text style={CalculatorStyles.displayText}>{inputValue}</Text>
@@ -191,3 +186,5 @@ export default CalculatorScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 };
+
+export default CalculatorScreen;

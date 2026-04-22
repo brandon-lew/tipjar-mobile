@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { SafeAreaView, StatusBar, ScrollView, View, Text } from 'react-native';
+import { StatusBar, ScrollView, View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { FontAwesome } from '@expo/vector-icons';
 
 // STYLES
 import InfoStyles from './../styles/InfoStyles';
 
-export default InfoScreen = ({ route }) => {
+const InfoScreen = ({ route }) => {
   const [countryTipData, _setCountryTipData] = useState([]);
   const countryTipDataRef = useRef(countryTipData);
   const setCountryTipData = (newCountryTipData) => {
@@ -45,7 +46,7 @@ export default InfoScreen = ({ route }) => {
   }, []);
 
   return (
-    <SafeAreaView style={InfoStyles.container}>
+    <SafeAreaView edges={[]} style={InfoStyles.container}>
       <StatusBar barStyle='dark-content' />
       <ScrollView style={InfoStyles.scrollContainer}>
         <View style={InfoStyles.countryContainer}>
@@ -103,3 +104,5 @@ export default InfoScreen = ({ route }) => {
     </SafeAreaView>
   );
 };
+
+export default InfoScreen;
