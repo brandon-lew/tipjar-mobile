@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-import {
-  StatusBar,
-  SafeAreaView,
-  Text,
-  View,
-  TouchableHighlight,
-} from 'react-native';
+import { StatusBar, Text, View, TouchableHighlight } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import CalculatorStyles from './../styles/CalculatorStyles';
 
 const CalculatorScreen = ({ navigation }) => {

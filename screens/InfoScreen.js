@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { SafeAreaView, StatusBar, ScrollView, View, Text } from 'react-native';
+import { StatusBar, ScrollView, View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { FontAwesome } from '@expo/vector-icons';
 
