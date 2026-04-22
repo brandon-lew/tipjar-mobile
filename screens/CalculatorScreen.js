@@ -54,7 +54,7 @@ const CalculatorScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={CalculatorStyles.container}>
+    <SafeAreaView edges={['top']} style={CalculatorStyles.container}>
       <StatusBar barStyle='dark-content' />
       <View style={CalculatorStyles.displayContainer}>
         <Text style={CalculatorStyles.displayText}>{inputValue}</Text>

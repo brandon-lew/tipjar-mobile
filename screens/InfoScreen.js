@@ -46,7 +46,7 @@ const InfoScreen = ({ route }) => {
   }, []);
 
   return (
-    <SafeAreaView style={InfoStyles.container}>
+    <SafeAreaView edges={[]} style={InfoStyles.container}>
       <StatusBar barStyle='dark-content' />
       <ScrollView style={InfoStyles.scrollContainer}>
         <View style={InfoStyles.countryContainer}>

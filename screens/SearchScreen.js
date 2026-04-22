@@ -84,7 +84,7 @@ const Search = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={SearchStyles.safeViewContainer}>
+    <SafeAreaView edges={['top']} style={SearchStyles.safeViewContainer}>
       <StatusBar barStyle='dark-content' />
       <View style={SearchStyles.bodyContainer}>
         <Header />

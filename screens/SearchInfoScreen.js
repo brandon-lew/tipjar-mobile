@@ -46,7 +46,7 @@ const SearchInfoScreen = ({ route }) => {
   }, []);
 
   return (
-    <SafeAreaView style={SearchInfoStyles.container}>
+    <SafeAreaView edges={[]} style={SearchInfoStyles.container}>
       <StatusBar barStyle='dark-content' />
       <ScrollView style={SearchInfoStyles.scrollContainer}>
         <View style={SearchInfoStyles.countryContainer}>

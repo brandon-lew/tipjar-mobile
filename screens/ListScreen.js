@@ -108,7 +108,7 @@ const ListScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={ListStyles.safeViewContainer}>
+    <SafeAreaView edges={['top']} style={ListStyles.safeViewContainer}>
       <StatusBar barStyle='dark-content' />
       <View style={ListStyles.container}>
         <Header />
