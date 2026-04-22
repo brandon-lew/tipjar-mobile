@@ -16,12 +16,15 @@
     "url": "git+https://github.com/blsnwbrdr/tipjar-mobile.git"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "2.1.2",
     "@react-native-community/netinfo": "11.4.1",
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.11.0",
     "expo": "^53.0.0",
+    "expo-asset": "~11.1.7",
+    "expo-font": "~13.3.2",
     "expo-splash-screen": "~0.30.10",
     "react": "19.0.0",
     "react-native": "0.79.6",
