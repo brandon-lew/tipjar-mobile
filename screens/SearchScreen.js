@@ -20,7 +20,7 @@ import Footer from './../components/Footer';
 import { colorMediumGrey } from './../styles/Constants';
 import SearchStyles from './../styles/SearchStyles';
 
-export default Search = ({ navigation }) => {
+const Search = ({ navigation }) => {
   const [displaySearchBar, _setDisplaySearchBar] = useState(false);
   const displaySearchBarRef = useRef(displaySearchBar);
   const setDisplaySearchBar = (newDisplaySearchBar) => {
@@ -122,3 +122,5 @@ export default Search = ({ navigation }) => {
     </SafeAreaView>
   );
 };
+
+export default Search;

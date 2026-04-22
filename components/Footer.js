@@ -4,10 +4,12 @@ import { View, Text } from 'react-native';
 // STYLES
 import FooterStyles from './../styles/FooterStyles';
 
-export default Footer = () => {
+const Footer = () => {
   return (
     <View style={FooterStyles.container}>
       <Text style={FooterStyles.text}>v3.2.0</Text>
     </View>
   );
 };
+
+export default Footer;

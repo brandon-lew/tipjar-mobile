@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import CalculatorStyles from './../styles/CalculatorStyles';
 
-export default CalculatorScreen = ({ navigation }) => {
+const CalculatorScreen = ({ navigation }) => {
   const [inputValue, setInputValue] = useState(0);
   const [previousInputValue, setPreviousInputValue] = useState(0);
   const [percentPressed, setPercentPressed] = useState(false);
@@ -191,3 +191,5 @@ export default CalculatorScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 };
+
+export default CalculatorScreen;

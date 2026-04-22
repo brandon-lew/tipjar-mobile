@@ -6,7 +6,7 @@ import { FontAwesome } from '@expo/vector-icons';
 // STYLES
 import SearchInfoStyles from './../styles/SearchInfoStyles';
 
-export default SearchInfoScreen = ({ route }) => {
+const SearchInfoScreen = ({ route }) => {
   const [countryTipData, _setCountryTipData] = useState([]);
   const countryTipDataRef = useRef(countryTipData);
   const setCountryTipData = (newCountryTipData) => {
@@ -102,3 +102,5 @@ export default SearchInfoScreen = ({ route }) => {
     </SafeAreaView>
   );
 };
+
+export default SearchInfoScreen;

@@ -6,7 +6,7 @@ import { FontAwesome } from '@expo/vector-icons';
 // STYLES
 import InfoStyles from './../styles/InfoStyles';
 
-export default InfoScreen = ({ route }) => {
+const InfoScreen = ({ route }) => {
   const [countryTipData, _setCountryTipData] = useState([]);
   const countryTipDataRef = useRef(countryTipData);
   const setCountryTipData = (newCountryTipData) => {
@@ -103,3 +103,5 @@ export default InfoScreen = ({ route }) => {
     </SafeAreaView>
   );
 };
+
+export default InfoScreen;
