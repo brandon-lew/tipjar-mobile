@@ -67,7 +67,7 @@ const SearchInfoScreen = ({ route }) => {
           <Text style={SearchInfoStyles.countryIcon}>
             <FontAwesome name='building' size={32} color='#494F56' />
           </Text>
-          <Text style={SearchInfoStyles.countryTitle}>Accomodation</Text>
+          <Text style={SearchInfoStyles.countryTitle}>Accommodation</Text>
           <Text style={SearchInfoStyles.countryText}>
             {countryTipDataRef.current.accommodation}
           </Text>
